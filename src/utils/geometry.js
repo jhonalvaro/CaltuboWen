@@ -6,7 +6,8 @@
  */
 export function computeRadius(f, c) {
   if (f === 0) return Infinity; // A straight line has infinite radius
-  return (f / 2) + (c ** 2 / (8 * f));
+  // Formula: R = (c^2 / (4 * f)) + f
+  return (c ** 2 / (4 * f)) + f;
 }
 
 /**
