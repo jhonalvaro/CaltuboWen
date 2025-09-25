@@ -1,0 +1,16 @@
+{
+  "name": "caltubowen",
+  "version": "1.0.0",
+  "description": "A simple web application for calculating tube measurements.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serve": "^14.2.0"
+  }
+}

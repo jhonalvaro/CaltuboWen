@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="./">
+  <title>Calculadora de Curvado de Tubos</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+  <div class="header">
+    <strong>DATOS</strong>
+  </div>
+
+  <div class="diagram">
+    <svg width="300" height="150" viewBox="0 0 300 150">
+      <path d="M40 110 Q150 30 260 110" stroke="#333" fill="none" stroke-width="3"/>
+      <line x1="150" y1="35" x2="150" y2="110" stroke="#333" stroke-width="1"/>
+      <text x="160" y="75" font-weight="bold">f</text>
+      <line x1="40" y1="110" x2="260" y2="110" stroke="#333" stroke-width="1"/>
+      <text x="150" y="125" text-anchor="middle" font-weight="bold">c</text>
+    </svg>
+  </div>
+
+  <div class="form-container">
+    <div class="form-row">
+      <label for="flecha">flecha (f)</label>
+      <input type="number" id="flecha" inputmode="numeric" step="any" placeholder="Ingrese la flecha">
+    </div>
+    <div class="form-row">
+      <label for="cuerda">cuerda (c)</label>
+      <input type="number" id="cuerda" inputmode="numeric" step="any" placeholder="Ingrese la cuerda">
+    </div>
+    <div class="form-row">
+      <label for="tam-tubo">tam. tubo</label>
+      <input type="number" id="tam-tubo" inputmode="numeric" step="any" value="6000">
+    </div>
+    <div class="form-row">
+      <label for="despedico">despedico</label>
+      <input type="number" id="despedico" inputmode="numeric" step="any" value="0">
+    </div>
+    <div class="form-row">
+      <label for="num-arcos">num. arcos</label>
+      <input type="number" id="num-arcos" inputmode="numeric" step="any" value="1">
+    </div>
+    <div class="form-row">
+        <label for="tam-regla">tam. regla</label>
+        <input type="number" id="tam-regla" inputmode="numeric" step="any" value="1000">
+    </div>
+    <button id="calculate-btn" class="btn">Calcular</button>
+  </div>
+
+  <div id="results-container" class="results" role="status" aria-live="polite">
+    <p><strong>Radio (R):</strong> <span id="resultado-radio">......</span></p>
+    <p><strong>Ángulo (θ):</strong> <span id="resultado-angulo">......</span></p>
+    <p><strong>Desarrollo de Arco (S):</strong> <span id="resultado-desarrollo">......</span></p>
+    <p><strong>Nº de Piezas:</strong> <span id="resultado-piezas">......</span></p>
+  </div>
+
+  <script src="src/app.js"></script>
+</body>
+</html>
